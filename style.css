@@ -327,6 +327,32 @@ footer {
     border-top: 1px solid #ffffff33;
     font-size: 14px;
 }
+footer a {
+    color: #d4af37 !important; /* الذهبي */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    color: #f5d76e; /* ذهبي أفتح عند المرور */
+}
+footer {
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #ffffff33;
+}
 /* ================================
    الأنيميشن
 ================================ */
@@ -335,5 +361,6 @@ footer {
     to { opacity: 1; transform: translateY(0); }
 
 }
+
 
 
