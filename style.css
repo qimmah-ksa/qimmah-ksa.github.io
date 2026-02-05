@@ -353,6 +353,64 @@ footer {
     padding-top: 15px;
     border-top: 1px solid #ffffff33;
 }
+footer {
+    background-color: #0a1a2a;
+    color: #ffffff;
+    padding: 50px 20px;
+    margin-top: 60px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    text-align: center;
+}
+
+.footer-col h3,
+.footer-col h4 {
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.footer-col p {
+    line-height: 1.8;
+}
+
+.footer-col a {
+    display: block;
+    color: #d4af37; /* الذهبي */
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.footer-col a i {
+    margin-left: 6px;
+}
+
+.footer-col a:hover {
+    color: #f5d76e; /* ذهبي أفتح */
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #ffffff33;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* للجوال */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
 /* ================================
    الأنيميشن
 ================================ */
@@ -361,6 +419,7 @@ footer {
     to { opacity: 1; transform: translateY(0); }
 
 }
+
 
 
 
