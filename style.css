@@ -189,111 +189,22 @@ input, textarea {
     display: inline-block;
 }
 
-/* ================================
-   الفوتر
-================================ */
-.site-footer {
-    background: #111;
-    color: #ddd;
-    padding: 50px 0 20px;
-    margin-top: 60px;
-}
+/* ===========================
+   FOOTER — BASE STYLE
+   =========================== */
 
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 40px;
-}
-
-.footer-col h4 {
-    margin-bottom: 15px;
-    font-size: 18px;
-    color: #fff;
-}
-
-.footer-col ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-col ul li {
-    margin-bottom: 8px;
-}
-
-.footer-col ul li a {
-    color: #bbb;
-    text-decoration: none;
-    transition: 0.2s;
-}
-
-.footer-col ul li a:hover {
-    color: #fff;
-}
-
-.social-icons a {
-    color: #bbb;
-    margin-left: 12px;
-    font-size: 20px;
-    transition: 0.2s;
-}
-
-.social-icons a:hover {
-    color: #fff;
-}
-
-.footer-bottom {
-    text-align: center;
-    margin-top: 30px;
-    padding-top: 15px;
-    border-top: 1px solid #333;
-    font-size: 14px;
-    color: #aaa;
-}
-
-/* ================================
-   تحسينات عامة
-================================ */
-a { cursor: pointer; }
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* ================================
-   الميديا
-================================ */
-@media (max-width: 768px) {
-    header { flex-direction: column; }
-    .hero h1 { font-size: 2rem; }
-}
-header nav a {
-    color: #ffffff !important;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-header nav a:hover {
-    color: #f0f0f0;
-}
-header nav {
-    display: flex;
-    gap: 25px; /* المسافة بين الروابط */
-}
-
-header nav a {
-    color: #ffffff !important;
-    text-decoration: none;
-    font-weight: 600;
-}
 footer {
     background-color: #0a1a2a;
     color: #ffffff;
     padding: 50px 20px;
     margin-top: 60px;
     direction: rtl;
+    border-top: 3px solid #d4af37; /* خط ذهبي فاصل */
 }
+
+/* ===========================
+   FOOTER — GRID LAYOUT
+   =========================== */
 
 .footer-container {
     max-width: 1200px;
@@ -304,47 +215,76 @@ footer {
     text-align: center;
 }
 
+.footer-col {
+    padding: 0 10px; /* تحسين المسافات */
+}
+
 .footer-col h3,
 .footer-col h4 {
     margin-bottom: 15px;
     font-weight: 700;
+    font-size: 20px; /* تحسين حجم العناوين */
+    letter-spacing: 0.5px;
 }
 
 .footer-col p {
     line-height: 1.9;
     margin: 0;
+    font-size: 15px;
 }
+
+/* ===========================
+   FOOTER — LINKS
+   =========================== */
 
 .footer-col a {
     display: block;
-    color: #d4af37;
+    color: #d4af37; /* الذهبي */
     text-decoration: none;
     margin-bottom: 10px;
     font-weight: 600;
     font-size: 15px;
+    transition: 0.2s ease-in-out;
 }
 
 .footer-col a i {
     margin-left: 6px;
+    font-size: 17px;
+    opacity: 0.9;
 }
 
+/* تأثير فاخر عند المرور */
 .footer-col a:hover {
-    color: #f5d76e;
+    color: #ffdf85; /* ذهبي أفتح */
+    transform: translateY(-2px);
 }
+
+/* ===========================
+   FOOTER — BOTTOM COPYRIGHT
+   =========================== */
 
 .footer-bottom {
     margin-top: 30px;
     padding-top: 15px;
     border-top: 1px solid #ffffff33;
     text-align: center;
-    font-size: 14px;
+    font-size: 13px;
+    opacity: 0.85;
+    letter-spacing: 0.3px;
 }
 
-/* للجوال */
+/* ===========================
+   FOOTER — RESPONSIVE
+   =========================== */
+
 @media (max-width: 768px) {
     .footer-container {
         grid-template-columns: 1fr;
         gap: 25px;
+    }
+
+    .footer-col {
+        margin-bottom: 25px;
     }
 }
 /* ================================
@@ -355,6 +295,7 @@ footer {
     to { opacity: 1; transform: translateY(0); }
 
 }
+
 
 
 
