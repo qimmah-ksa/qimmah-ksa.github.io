@@ -1,5 +1,5 @@
 /* ================================
-   الأساسيات العامة للموقع
+   المتغيرات العامة
 ================================ */
 :root {
     --dark-blue: #002147;
@@ -8,7 +8,12 @@
     --gray: #f4f7f6;
 }
 
-* { box-sizing: border-box; }
+/* ================================
+   الأساسيات
+================================ */
+* {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
@@ -28,6 +33,11 @@ body {
     margin: auto;
 }
 
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
 /* ================================
    الهيدر
 ================================ */
@@ -43,10 +53,17 @@ header {
     border-bottom: 3px solid var(--gold);
 }
 
-.logo {
+.logo-text {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     color: var(--gold);
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.header-logo {
+    height: 45px;
 }
 
 nav ul {
@@ -58,9 +75,9 @@ nav ul {
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
     transition: 0.2s;
 }
 
@@ -68,33 +85,36 @@ nav ul li a:hover {
     color: var(--gold);
 }
 
-nav ul li a.cta {
-    padding: 8px 16px;
+nav ul li a.cta,
+.contact-btn {
+    padding: 8px 18px;
     background: var(--gold);
     color: var(--dark-blue);
     border-radius: 6px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
-nav ul li a.cta:hover {
-    background: #f5d77a;
+nav ul li a.cta:hover,
+.contact-btn:hover {
+    background: #b8932f;
 }
 
 /* ================================
    قسم البطل (Hero)
 ================================ */
 .hero {
-    background: linear-gradient(rgba(0,33,71,0.85), rgba(0,33,71,0.85)),
-                url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1350&q=80');
+    background:
+        linear-gradient(rgba(0,33,71,0.85), rgba(0,33,71,0.85)),
+        url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
     background-position: center;
-    height: 90vh;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
+    color: #ffffff;
     padding: 20px;
 }
 
@@ -135,7 +155,7 @@ h2::after {
 }
 
 /* ================================
-   الشبكة (Grid)
+   الشبكة والكروت
 ================================ */
 .grid {
     display: grid;
@@ -168,13 +188,14 @@ h2::after {
     border-radius: 10px;
 }
 
-input, textarea {
+input,
+textarea {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    font-family: 'Cairo';
+    font-family: "Cairo", sans-serif;
 }
 
 .btn {
@@ -185,7 +206,6 @@ input, textarea {
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
-    text-decoration: none;
     display: inline-block;
 }
 
@@ -208,7 +228,7 @@ input, textarea {
 .footer-col h4 {
     margin-bottom: 15px;
     font-size: 18px;
-    color: #fff;
+    color: #ffffff;
 }
 
 .footer-col ul {
@@ -223,12 +243,11 @@ input, textarea {
 
 .footer-col ul li a {
     color: #bbb;
-    text-decoration: none;
     transition: 0.2s;
 }
 
 .footer-col ul li a:hover {
-    color: #fff;
+    color: #ffffff;
 }
 
 .social-icons a {
@@ -239,7 +258,7 @@ input, textarea {
 }
 
 .social-icons a:hover {
-    color: #fff;
+    color: #ffffff;
 }
 
 .footer-bottom {
@@ -252,35 +271,32 @@ input, textarea {
 }
 
 /* ================================
-   تحسينات عامة
-================================ */
-a { cursor: pointer; }
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-.page-logo {
-    text-align: center;
-    margin: 25px 0 10px;
-}
-
-.page-logo img {
-    height: 80px;
-}
-/* ================================
-   الميديا
+   استجابة الشاشات الصغيرة
 ================================ */
 @media (max-width: 768px) {
-    header { flex-direction: column; }
-    .hero h1 { font-size: 2rem; }
+    nav ul {
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
 }
 
 /* ================================
    الأنيميشن
 ================================ */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
