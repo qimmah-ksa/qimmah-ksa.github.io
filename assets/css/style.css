@@ -303,7 +303,55 @@ nav a {
 nav a:hover {
     color: var(--gold);
 }
+/* ================================
+   الفوتر — النسخة النهائية
+================================ */
 
+.site-footer {
+    background: #111;
+    color: #ddd;
+    padding: 50px 0 20px;
+    margin-top: 60px;
+}
+
+/* شبكة الأعمدة */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+    align-items: start;
+}
+
+/* كل عمود */
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* الروابط */
+.site-footer a {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+    transition: 0.2s;
+}
+
+.site-footer a:hover {
+    color: #ffffff;
+}
+
+/* أسفل الفوتر */
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #333;
+    font-size: 14px;
+    color: #aaa;
+}
 /* ================================
    الأنيميشن
 ================================ */
@@ -317,6 +365,7 @@ nav a:hover {
         transform: translateY(0);
     }
 }
+
 
 
 
