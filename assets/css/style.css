@@ -260,7 +260,14 @@ img {
     max-width: 100%;
     height: auto;
 }
+.page-logo {
+    text-align: center;
+    margin: 25px 0 10px;
+}
 
+.page-logo img {
+    height: 80px;
+}
 /* ================================
    الميديا
 ================================ */
@@ -275,4 +282,5 @@ img {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
+
 }
