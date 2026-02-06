@@ -286,7 +286,17 @@ textarea {
         padding: 60px 5%;
     }
 }
+nav a {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+    margin-left: 20px;
+    transition: 0.2s;
+}
 
+nav a:hover {
+    color: var(--gold);
+}
 /* ================================
    الأنيميشن
 ================================ */
@@ -300,3 +310,4 @@ textarea {
         transform: translateY(0);
     }
 }
+
