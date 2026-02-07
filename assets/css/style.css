@@ -105,5 +105,6 @@ footer { background: var(--primary-navy); color: #bbb; padding: 70px 10% 30px; }
 footer {
     border-top: 4px solid #ffffff;
     padding-top: 25px;
+    width: 100vw;        /* يجعل الفوتر بعرض الشاشة بالكامل */
+    margin-left: calc(50% - 50vw); /* يكسر حدود الـ container */
 }
-
