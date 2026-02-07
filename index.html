@@ -158,21 +158,76 @@
         <div class="section-header">
             <h2>تواصل معنا</h2>
         </div>
-        <div class="contact-layout">
-            <div class="contact-form-box">
-                <form action="https://formspree.io/f/contact@mal-invest.com" method="POST">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="الاسم الكريم / اسم الشركة" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="البريد الإلكتروني" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" rows="5" placeholder="كيف يمكننا مساعدتكم؟" required></textarea>
-                    </div>
-                    <button type="submit" class="main-btn w-full">إرسال الطلب</button>
-                </form>
-            </div>
+      <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="05394035-d52f-437d-a669-ccb9e4625b93">
+
+    <div class="form-group">
+        <input type="text" name="name" placeholder="الاسم الكريم / اسم الشركة" required>
+    </div>
+
+    <div class="form-group">
+        <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+    </div>
+
+    <div class="form-group">
+        <textarea name="message" rows="5" placeholder="كيف يمكننا مساعدتكم؟" required></textarea>
+    </div>
+
+    <button type="submit" class="main-btn w-full">إرسال الطلب</button>
+
+    <!-- صندوق النجاح -->
+    <div id="form-success" style="
+        display:none;
+        margin-top:20px;
+        padding:15px;
+        background:#e8f7ef;
+        border:1px solid #0a7c3a;
+        color:#0a7c3a;
+        border-radius:8px;
+        font-weight:600;
+        text-align:center;
+    ">
+        تم إرسال طلبك بنجاح، سنقوم بالتواصل معكم قريبًا.
+    </div>
+
+    <!-- صندوق الخطأ -->
+    <div id="form-error" style="
+        display:none;
+        margin-top:20px;
+        padding:15px;
+        background:#fdeaea;
+        border:1px solid #b30000;
+        color:#b30000;
+        border-radius:8px;
+        font-weight:600;
+        text-align:center;
+    ">
+        حدث خطأ أثناء الإرسال، يرجى المحاولة مرة أخرى.
+    </div>
+</form>
+
+<script>
+document.getElementById("contact-form").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    const response = await fetch(form.action, {
+        method: form.method,
+        body: formData
+    });
+
+    if (response.ok) {
+        document.getElementById("form-success").style.display = "block";
+        document.getElementById("form-error").style.display = "none";
+        form.reset();
+    } else {
+        document.getElementById("form-success").style.display = "none";
+        document.getElementById("form-error").style.display = "block";
+    }
+});
+</script>
             <div class="contact-details">
                 <div class="info-item">
                     <i class="fa-solid fa-location-dot"></i>
@@ -228,6 +283,7 @@
 
 </body>
 </html>
+
 
 
 
