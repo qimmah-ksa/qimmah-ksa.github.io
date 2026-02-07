@@ -1,373 +1,104 @@
-/* ================================
-   المتغيرات العامة
-================================ */
-:root {
-    --dark-blue: #002147;
-    --gold: #D4AF37;
-    --white: #ffffff;
-    --gray: #f4f7f6;
-}
+<style>
+        /* المتغيرات اللونية */
+        :root {
+            --primary-color: #002147; /* كحلي عميق للثقة */
+            --accent-color: #D4AF37;  /* ذهبي للتميز (نفس لون الشعار الجديد) */
+            --text-white: #ffffff;
+            --soft-gray: #f4f7f6;
+            --text-dark: #333333;
+        }
 
-/* ================================
-   الأساسيات
-================================ */
-* {
-    box-sizing: border-box;
-}
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Cairo', sans-serif; line-height: 1.6; color: var(--text-dark); background-color: #fff; scroll-behavior: smooth; }
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: "Cairo", sans-serif;
-    background: var(--white);
-    color: var(--dark-blue);
-    direction: rtl;
-    text-align: right;
-    line-height: 1.8;
-    scroll-behavior: smooth;
-}
+        /* الهيدر */
+        header {
+            background-color: var(--primary-color);
+            padding: 10px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--accent-color);
+        }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
+        .logo-container { display: flex; align-items: center; gap: 15px; }
+        /* تعديل حجم الشعار ليتناسب مع الأيقونة الجديدة */
+        .logo-container img { height: 60px; width: auto; }
+        .logo-container span { color: var(--accent-color); font-size: 24px; font-weight: 900; }
 
-a {
-    cursor: pointer;
-    text-decoration: none;
-}
+        nav { display: flex; align-items: center; gap: 20px; }
+        nav a { color: var(--text-white); text-decoration: none; font-weight: 600; transition: 0.3s; font-size: 15px; }
+        nav a:hover { color: var(--accent-color); }
+        nav a.contact-btn-nav { 
+            background-color: var(--accent-color); 
+            color: var(--primary-color); 
+            padding: 8px 20px; 
+            border-radius: 5px; 
+        }
+        nav a.contact-btn-nav:hover { background-color: #b8932f; color: #fff; }
 
-/* ================================
-   الهيدر
-================================ */
-header {
-    background-color: var(--dark-blue);
-    padding: 15px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 3px solid var(--gold);
-}
+        /* قسم البطل - Hero */
+        .hero {
+            /* استخدام صورة خلفية احترافية */
+            background: linear-gradient(rgba(0,33,71,0.7), rgba(0,33,71,0.7)), url('https://images.unsplash.com/photo-1454165833767-131435bb4496?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover; background-position: center;
+            height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center;
+            text-align: center; color: #fff; padding: 20px;
+        }
+        .hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); color: var(--accent-color); margin-bottom: 20px; }
+        .hero p { max-width: 800px; font-size: 1.2rem; margin-bottom: 30px; }
 
-.logo-text {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    color: var(--gold);
-    font-size: 22px;
-    font-weight: 700;
-}
+        .btn-main { background: var(--accent-color); color: var(--primary-color); padding: 15px 40px; border-radius: 30px; text-decoration: none; font-weight: 700; transition: 0.3s; }
+        .btn-main:hover { transform: scale(1.05); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
 
-.header-logo {
-    height: 45px;
-}
+        /* الأقسام العامة */
+        section { padding: 80px 10%; }
+        .section-title { text-align: center; margin-bottom: 50px; font-size: 2.5rem; color: var(--primary-color); }
+        .section-title::after { content: ''; display: block; width: 80px; height: 4px; background: var(--accent-color); margin: 10px auto; }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
-}
+        /* تنسيق خاص لقسم من نحن بعد التعديل */
+        .about-text-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
 
-nav ul li a {
-    color: #ffffff;
-    font-weight: 600;
-    font-size: 16px;
-    transition: 0.2s;
-}
+        /* الشبكات (Grids) */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: var(--soft-gray); padding: 30px; border-radius: 12px; text-align: center; transition: 0.3s; border-bottom: 4px solid transparent; }
+        .card:hover { border-bottom-color: var(--accent-color); transform: translateY(-5px); background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .card img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 20px; }
+        .card i { font-size: 40px; color: var(--accent-color); margin-bottom: 15px; }
 
-nav ul li a:hover {
-    color: var(--gold);
-}
+        /* الرؤية والرسالة */
+        .vision-mission { background-color: var(--primary-color); color: #fff; }
+        .vision-mission .card { background: rgba(255,255,255,0.1); color: #fff; border: 1px solid rgba(255,255,255,0.2); }
 
-nav ul li a.cta,
-.contact-btn {
-    padding: 8px 18px;
-    background: var(--gold);
-    color: var(--dark-blue);
-    border-radius: 6px;
-    font-weight: 700;
-}
+        /* تواصل معنا */
+        .contact-container { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        form input, form textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Cairo'; }
+        .contact-info div { margin-bottom: 20px; display: flex; align-items: center; gap: 15px; }
+        .social-icons a { font-size: 24px; color: var(--primary-color); margin-left: 15px; transition: 0.3s; }
+        .social-icons a:hover { color: var(--accent-color); }
 
-nav ul li a.cta:hover,
-.contact-btn:hover {
-    background: #b8932f;
-}
+        /* الفوتر */
+        footer { background-color: var(--primary-color); color: #ddd; padding: 60px 10% 20px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 40px; }
+        .footer-col h3, .footer-col h4 { color: #fff; margin-bottom: 20px; }
+        .footer-col a { color: #fff; text-decoration: none; display: block; margin-bottom: 10px; transition: 0.3s; }
+        .footer-col a:hover { color: var(--accent-color); padding-right: 5px; }
+        .footer-bottom { text-align: center; padding-top: 20px; font-size: 14px; }
 
-/* ================================
-   قسم البطل (Hero)
-================================ */
-.hero {
-    background:
-        linear-gradient(rgba(0,33,71,0.85), rgba(0,33,71,0.85)),
-        url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1350&q=80');
-    background-size: cover;
-    background-position: center;
-    min-height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #ffffff;
-    padding: 20px;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    color: var(--gold);
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin-bottom: 30px;
-}
-
-/* ================================
-   الأقسام العامة
-================================ */
-section {
-    padding: 80px 10%;
-    animation: fadeIn 1s ease-in-out;
-}
-
-h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-    position: relative;
-}
-
-h2::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background: var(--gold);
-    margin: 10px auto;
-}
-
-/* ================================
-   الشبكة والكروت
-================================ */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-}
-
-.card {
-    background: var(--gray);
-    padding: 30px;
-    border-radius: 8px;
-    transition: 0.3s;
-    border-top: 4px solid var(--gold);
-    text-align: center;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-/* ================================
-   نموذج التواصل
-================================ */
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background: var(--gray);
-    padding: 40px;
-    border-radius: 10px;
-}
-
-input,
-textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-family: "Cairo", sans-serif;
-}
-
-.btn {
-    background: var(--gold);
-    color: var(--dark-blue);
-    padding: 12px 35px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    display: inline-block;
-}
-
-/* ================================
-   الفوتر — النسخة النهائية
-================================ */
-
-.site-footer {
-    background: #111;
-    color: #ddd;
-    padding: 50px 0 20px;
-    margin-top: 60px;
-}
-
-/* شبكة الأعمدة */
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 50px;
-    align-items: start;
-}
-
-/* كل عمود */
-.footer-col {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-/* عناوين الأعمدة */
-.footer-col h4,
-.footer-col h3 {
-    margin-bottom: 10px;
-    color: #fff;
-}
-
-/* الروابط */
-.site-footer a {
-    color: var(--gold);
-    text-decoration: none;
-    font-weight: 600;
-    display: block;
-    margin-bottom: 6px;
-    transition: 0.2s;
-}
-
-.site-footer a:hover {
-    color: #ffffff;
-}
-
-/* أسفل الفوتر */
-.footer-bottom {
-    text-align: center;
-    margin-top: 30px;
-    padding-top: 15px;
-    border-top: 1px solid #333;
-    font-size: 14px;
-    color: #aaa;
-}
-/* ================================
-   استجابة الشاشات الصغيرة
-================================ */
-@media (max-width: 768px) {
-    nav {
-        gap: 15px;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    section {
-        padding: 60px 5%;
-    }
-}
-
-/* روابط النافبار */
-nav a {
-    color: #ffffff;
-    font-weight: 600;
-    font-size: 16px;
-    margin-left: 20px;
-    transition: 0.2s;
-}
-
-nav a:hover {
-    color: var(--gold);
-}
-
-/* الهيدر (لو ما هو موجود فوق) */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-header {
-    background-color: var(--dark-blue);
-    padding: 15px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 3px solid var(--gold);
-}
-
-/* الشعار + النص */
-.logo-text {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    color: var(--gold);
-    font-size: 22px;
-    font-weight: 700;
-}
-
-.header-logo {
-    height: 45px;
-}
-
-/* روابط القائمة */
-nav {
-    display: flex;
-    gap: 25px;
-    align-items: center;
-}
-
-nav a {
-    color: #ffffff;
-    font-weight: 600;
-    font-size: 16px;
-    transition: 0.2s;
-}
-
-nav a:hover {
-    color: var(--gold);
-}
-
-/* زر تواصل معنا */
-.contact-btn {
-    padding: 8px 18px;
-    background: var(--gold);
-    color: var(--dark-blue);
-    border-radius: 6px;
-    font-weight: 700;
-}
-
-.contact-btn:hover {
-    background: #b8932f;
-}
-/* ================================
-   الأنيميشن
-================================ */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
+        /* التجاوب مع الجوال */
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; }
+            nav { flex-wrap: wrap; justify-content: center; gap: 10px; }
+            .contact-container { grid-template-columns: 1fr; }
+            section { padding: 50px 5%; }
+        }
+    </style>
