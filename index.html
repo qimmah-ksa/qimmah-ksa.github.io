@@ -7,98 +7,133 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     
-   <link rel="stylesheet" href="assets/css/style.css"> 
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 <body>
 
     <header>
-        <div class="logo-container">
-            <span>قمة التميز</span>
-        </div>
+        <a href="#home" class="brand-name">قمة التميز</a>
         <nav>
             <a href="#home">الرئيسية</a>
             <a href="#about">من نحن</a>
             <a href="#services">الخدمات</a>
             <a href="#why-us">لماذا نحن</a>
             <a href="https://blog.mal-invest.com/" target="_blank">المدونة</a>
-            <a href="#contact" class="contact-btn-nav">تواصل معنا</a>
+            <a href="#contact" class="nav-cta">تواصل معنا</a>
         </nav>
     </header>
 
     <section id="home" class="hero">
         <h1>قمة التميز للاستشارات المالية والإدارية</h1>
-        <p>نحن شريكك الموثوق لبناء مستقبل مؤسسي قوي من خلال حلول مالية مبتكرة واستراتيجيات إدارية احترافية تضعك في القمة وتضمن لك نمواً مستداماً.</p>
-        <a href="#contact" class="btn-main">احصل على استشارتك الآن</a>
+        <p>نحن شريكك الموثوق لبناء مستقبل مؤسسي قوي من خلال حلول مالية مبتكرة واستراتيجيات إدارية احترافية تضمن لك الريادة والاستدامة.</p>
+        <a href="#contact" class="main-btn">ابدأ استشارتك الآن</a>
     </section>
 
     <section id="about">
-        <h2 class="section-title">من نحن</h2>
-        <div class="about-text-container">
-            <p>قمة التميز هي شركة استشارية رائدة متخصصة في تقديم الحلول المالية والإدارية المتكاملة. نجمع بين الخبرة العميقة والرؤية المبتكرة لنساعد المنشآت على تجاوز التحديات وتحقيق أقصى درجات الكفاءة التشغيلية.</p>
+        <div class="section-header">
+            <h2>من نحن</h2>
+        </div>
+        <div class="about-content">
+            <p>شركة قمة التميز هي صرح استشاري متخصص يهدف إلى تمكين الشركات والمؤسسات من تحقيق أهدافها الاستراتيجية. نحن نؤمن بأن النجاح المؤسسي يبدأ من التخطيط المالي السليم والإدارة الذكية للعمليات.</p>
+            <p>نسخر خبراتنا العميقة في السوق السعودي لتقديم حلول مخصصة تعالج التحديات الحقيقية التي تواجه أعمالكم، مع الالتزام التام بالشفافية والجودة والابتكار في كل ما نقدمه.</p>
         </div>
     </section>
 
-    <section class="vision-mission">
+    <section id="services" style="background-color: var(--light-gray);">
+        <div class="section-header">
+            <h2>خدماتنا</h2>
+        </div>
         <div class="grid">
             <div class="card">
-                <i class="fa-solid fa-eye"></i>
-                <h3>رؤيتنا</h3>
-                <p>أن نكون المرجع الأول والملهم في قطاع الاستشارات المالية والإدارية على مستوى المنطقة.</p>
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400&q=80" alt="استشارات مالية">
+                <div class="card-body">
+                    <h3>الاستشارات المالية</h3>
+                    <p>إدارة التدفقات النقدية، التحليل المالي المتقدم، وهيكلة التكاليف لرفع الربحية.</p>
+                </div>
             </div>
             <div class="card">
-                <i class="fa-solid fa-bullseye"></i>
-                <h3>رسالتنا</h3>
-                <p>تمكين شركائنا من تحقيق التميز المؤسسي عبر تقديم حلول استشارية دقيقة وقابلة للتنفيذ.</p>
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=400&q=80" alt="استشارات إدارية">
+                <div class="card-body">
+                    <h3>الاستشارات الإدارية</h3>
+                    <p>تطوير الهياكل التنظيمية وتحسين العمليات وسلاسل الإمداد والتحول المؤسسي.</p>
+                </div>
             </div>
             <div class="card">
-                <i class="fa-solid fa-gem"></i>
-                <h3>قيمنا</h3>
-                <p>النزاهة، الاحترافية، الابتكار، والالتزام المطلق بتحقيق نتائج ملموسة لعملائنا.</p>
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&q=80" alt="تطوير النظم">
+                <div class="card-body">
+                    <h3>تطوير النظم والأعمال</h3>
+                    <p>أتمتة العمليات الإدارية، وتصميم لوحات تحكم الأداء، وإعداد الخطط الاستراتيجية.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="services">
-        <h2 class="section-title">خدماتنا</h2>
+    <section class="vision-section">
+        <div class="section-header">
+            <h2>رؤيتنا وقيمنا</h2>
+        </div>
         <div class="grid">
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=400&q=80" alt="استشارات مالية">
-                <h3>الاستشارات المالية</h3>
-                <p>إدارة التدفقات وهيكلة رأس المال لضمان استقرار مالي طويل الأمد.</p>
+                <div class="card-body">
+                    <i class="fa-solid fa-eye" style="font-size: 40px; color: var(--accent-gold); margin-bottom: 20px;"></i>
+                    <h3>رؤيتنا</h3>
+                    <p>أن نكون الشريك الاستشاري الأول والأكثر موثوقية في تمكين المؤسسات من الوصول إلى قمة أدائها المالي والإداري.</p>
+                </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=400&q=80" alt="استشارات إدارية">
-                <h3>الاستشارات الإدارية</h3>
-                <p>تطوير الهياكل التنظيمية ورفع كفاءة العمليات الداخلية.</p>
+                <div class="card-body">
+                    <i class="fa-solid fa-bullseye" style="font-size: 40px; color: var(--accent-gold); margin-bottom: 20px;"></i>
+                    <h3>رسالتنا</h3>
+                    <p>تقديم حلول استشارية واقعية ومبتكرة تساهم في نمو أعمال عملائنا وتحويل التحديات إلى فرص نمو مستدامة.</p>
+                </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400&q=80" alt="تحليل مالي">
-                <h3>التحليل المالي وتطوير الأعمال</h3>
-                <p>تقييم دقيق للأداء المالي وأتمتة النظم لرفع الإنتاجية العامة.</p>
+                <div class="card-body">
+                    <i class="fa-solid fa-star" style="font-size: 40px; color: var(--accent-gold); margin-bottom: 20px;"></i>
+                    <h3>قيمنا</h3>
+                    <p>نرتكز على النزاهة المطلقة، الاحترافية العالية، والتركيز الكامل على تحقيق نتائج ملموسة لعملائنا.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="contact">
-        <h2 class="section-title">تواصل معنا</h2>
-        <div class="contact-container">
-            <div class="contact-form">
-                <form>
-                    <input type="text" placeholder="الاسم الكريم / اسم الشركة" required>
-                    <input type="email" placeholder="البريد الإلكتروني" required>
-                    <textarea rows="6" placeholder="كيف يمكننا مساعدتكم؟"></textarea>
-                    <button type="submit" class="btn-main" style="width: 100%; border:none; cursor:pointer;">إرسال الطلب</button>
+        <div class="section-header">
+            <h2>تواصل معنا</h2>
+        </div>
+        <div class="contact-layout">
+            <div class="contact-form-box">
+                <form action="https://formspree.io/f/contact@mal-invest.com" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="الاسم الكريم / اسم الشركة" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" rows="5" placeholder="تفاصيل الاستشارة المطلوبة" required></textarea>
+                    </div>
+                    <button type="submit" class="main-btn" style="width: 100%;">إرسال الطلب</button>
                 </form>
             </div>
-            <div class="contact-info">
-                <h3>معلومات الاتصال</h3>
-                <br>
-                <div><i class="fa-solid fa-location-dot"></i> <span>الرياض – حي الياسمين</span></div>
-                <div><i class="fa-solid fa-phone"></i> <span>+966 533221169</span></div>
-                <div><i class="fa-solid fa-envelope"></i> <span>contact@mal-invest.com</span></div>
-                <br>
-                <div class="social-icons">
+            <div class="contact-details">
+                <h3>كن على اتصال</h3>
+                <div class="info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>الرياض – حي الياسمين</span>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+966 533221169</span>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>contact@mal-invest.com</span>
+                </div>
+                
+                <div class="social-links">
                     <a href="#"><i class="fa-brands fa-tiktok"></i></a>
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
@@ -109,10 +144,10 @@
     </section>
 
     <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h3>قمة التميز</h3>
-                <p>نقدم حلولًا احترافية تدعم نمو الشركات وتطوير أعمالها، كما نسعى لتمكين المؤسسات من اتخاذ قرارات استراتيجية مبنية على بيانات دقيقة.</p>
+        <div class="footer-main">
+            <div class="footer-col" style="grid-column: span 1.5;">
+                <h4>قمة التميز</h4>
+                <p>نقدم حلولًا احترافية تدعم نمو الشركات وتطوير أعمالها، كما نسعى لتمكين المؤسسات من اتخاذ قرارات استراتيجية مبنية على بيانات دقيقة ورؤية واضحة.</p>
             </div>
             <div class="footer-col">
                 <h4>روابط سريعة</h4>
@@ -121,20 +156,20 @@
                 <a href="https://blog.mal-invest.com/">المدونة</a>
             </div>
             <div class="footer-col">
-                <h4>الصفحات القانونية</h4>
+                <h4>قانوني</h4>
                 <a href="#">سياسة الخصوصية</a>
                 <a href="#">شروط الاستخدام</a>
                 <a href="#">إخلاء المسؤولية</a>
             </div>
             <div class="footer-col">
-                <h4>تواصل معنا</h4>
+                <h4>اتصل بنا</h4>
                 <p>الرياض - حي الياسمين</p>
                 <p>+966 533221169</p>
                 <p>contact@mal-invest.com</p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>جميع الحقوق محفوظة © 2026 قمة التميز للاستشارات المالية والإدارية</p>
+        <div class="copy">
+            جميع الحقوق محفوظة © 2026 قمة التميز للاستشارات المالية والإدارية
         </div>
     </footer>
 
