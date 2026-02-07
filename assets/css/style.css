@@ -102,3 +102,8 @@ footer { background: var(--primary-navy); color: #bbb; padding: 70px 10% 30px; }
     header { flex-direction: column; gap: 15px; }
     nav { gap: 10px; }
 }
+footer {
+    border-top: 4px solid #ffffff;
+    padding-top: 25px;
+}
+
